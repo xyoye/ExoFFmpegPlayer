@@ -4,14 +4,14 @@ ExoPlayer的FFmpeg扩展，源码来自于[mqplayer](https://github.com/joffychi
 
 ## 使用 ##
 
-gradle配置：参考app.gradle
+gradle配置：参考[app.gradle](https://github.com/xyoye/ExoFFmpegPlayer/blob/master/app/build.gradle)
 
 生成ExoPlayer：new ExoFFmpegPlayer(Context);
 
 Over
 
 ## so、arr文件生成 ##
-1、app.gradle中引用exoffmpeg_source模块 -> Rebuild Project ->
+1、app.gradle中引用exoffmpeg_source模块（忽略掉arr文件的引用）） -> Rebuild Project ->
 so文件在文件夹：“build/intermediates/intermediate-jars/debug/jni/armeabi-v7a/libexoffmpeg.so(libffmpeg.so)”
 
 2、将1中生成的两个so文件放入exoffmpeg模块中“libs/armeabi-v7a”目录 -> Android Studio中右上角gradle -> 选中exoffmpeg -> 打开Tasks/build/assembleRelease -> arr文件在文件夹：“build/outputs/arr/exoffmpeg-release.arr”
